@@ -1,0 +1,10 @@
+allow-hotplug eth0
+
+# For dynamic IP assign uncomment below
+#iface eth0 inet dhcp
+
+# For static IP assign uncomment the following 4 lines
+iface eth0 inet static
+	address 192.168.1.229
+	netmask 255.255.255.0
+	gateway 192.168.1.1
