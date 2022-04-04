@@ -1,13 +1,37 @@
-
+#############################
+#            Cherif Chibane
+#            AurseTech Inc.
+#            Mini-TX-PYNQ
+#            7 Reimhart Way
+#            Bridgewater, NJ 08807
+#            (c) AurseTech Inc.
+##############################
+# Rev.
+# Rev 1.0  - Added the conenction to the RF front end
+#
+#
+#
+#######################
+### Frontend control
+set_property PACKAGE_PIN AB22 [get_ports {PA_ENA}]
+set_property IOSTANDARD LVCMOS33 [get_ports {PA_ENA}]
+########
+###     REF_ENA_A   REF_ENA_B         Output
+###        0          1                Switch Power divide
+###        1          0                1W output
+###
+set_property PACKAGE_PIN AB20 [get_ports {RF_ENA}]
+set_property IOSTANDARD LVCMOS33 [get_ports {RF_ENA}]
+set_property PACKAGE_PIN W21 [get_ports {RF_ENB}]
+set_property IOSTANDARD LVCMOS33 [get_ports {RF_ENB}]
 
 set_property PACKAGE_PIN AB18 [get_ports {LED[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {LED[0]}]
-
+#########################
 set_property PACKAGE_PIN AB19 [get_ports {LED1[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {LED1[0]}]
 
-   
-     
+ 
 #set_property PACKAGE_PIN T21 [get_ports UART1_TX]
 #set_property PACKAGE_PIN U22 [get_ports UART1_RX]
 #set_property IOSTANDARD LVCMOS33 [get_ports UART1_RX]
